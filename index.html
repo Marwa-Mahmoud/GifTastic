@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GifTastic</title>
+</head>
+<body>
+	<div id="buttons-view">
+		
+	</div>
+	<form>
+		<label>Add an Animal</label>
+		<input type="text" name="animal" id="topic-input"><br>
+		<input type="submit" name="" id="submit-topic">
+	</form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  
+  	var topics = ["dog", "cat" , "rabbit"];
+
+  	var displayButtons = function(){
+
+  		$("#buttons-view").empty();
+  		for (var i = 0; i < topics.length; i++) {
+  			var btn = $("<button>");
+  			btn.text(topics[i]);
+  			btn.attr("data-value", topics[i]);
+  			$("#buttons-view").append(btn);
+  		}
+  	}
+
+  	$("#submit-topic").on("click", function(){
+  		event.preventDefault();
+  		var newTopic = $("#topic-input").val().trim();
+  		topics.push(newTopic);
+  		displayButtons();
+
+  	});
+
+  	displayButtons();
+
+
+  </script>
+
+</body>
+</html>
