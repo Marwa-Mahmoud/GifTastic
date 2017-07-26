@@ -1,5 +1,5 @@
 
-  	var topics = ["dog", "cat" , "rabbit"];
+  	var topics = ["dog", "cat" , "rabbit", "parrot", "hamster", "tortoise", "horse", "cow"];
 
   	var displayButtons = function(){
 
@@ -71,6 +71,7 @@
   		event.preventDefault();
   		var newTopic = $("#topic-input").val().trim();
   		topics.push(newTopic);
+      $("#topic-input").val("");
   		displayButtons();
 
   	});
