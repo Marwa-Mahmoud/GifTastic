@@ -1,0 +1,42 @@
+body {
+  font: 18px arial, sans-serif;
+  background: #eee;
+}
+
+.item{
+	float: left;
+	margin: 10px;
+}
+
+button
+,input[type="submit"] 
+{
+  padding: 5px 20px;
+  margin: 0 10px 10px 0;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  background: #659a98;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #bbb;
+}
+
+#buttons-view{
+	margin-top: 30px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #334e4d;
+}
+
+button.active {
+  background: #334e4d;
+}
+
+form {
+  
+  width: 30%;
+  padding: 20px;
+}
